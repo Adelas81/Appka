@@ -1,11 +1,9 @@
 <template>
-  <div  v-if="currentQuestion">
-    <header>
-
+  <div class="pozadi" v-if="currentQuestion">
+    
       <h1> {{currentQuestion.question}} </h1>
 
-    </header>
-
+    
     <div  class="kontejner">
 
       <div v-for="(answer,index) in currentQuestion.answers" v-bind:key="index" class="foto">
@@ -80,7 +78,7 @@ export default {
 }
 </script>
 
-<style > 
+<style scoped > 
 
 /* MOBIL */
 
@@ -101,8 +99,13 @@ padding: 5px;
 margin: 30px 30px 20px 30px;
 }
 
-body { 
+.pozadi { 
+    margin: 0px;
+    min-width: 100vw;
+    min-height: 100vh;
     background: url('/quiz1/pozadi/pozadi-ovecky-ruzove.jpg') center, no-repeat;
+    background-size: cover;
+    
 }
 
 img {

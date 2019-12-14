@@ -19,7 +19,7 @@ export default {
 
   methods: {
     buttonKlik() {
-      this.$router.push({path:  '/quiz/1/1'})
+      this.$router.push({path: '/quiz/1/1'})
     }
   }
 
