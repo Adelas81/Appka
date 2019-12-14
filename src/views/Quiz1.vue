@@ -113,6 +113,8 @@ img {
     border-radius: 10%;
     margin: 5px 10px 5px 10px;
     width: 50%;
+    max-height: 150px;
+    object-fit: fill;
 }
 
 /* .kviz {
