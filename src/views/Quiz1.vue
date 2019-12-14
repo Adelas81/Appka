@@ -1,31 +1,57 @@
 <template>
- 
+  <div v-if="currentQuestion">
+    <h1> {{currentQuestion.question}} </h1>
+
+    <div v-for="(answer,index) in currentQuestion.answers" v-bind:key="index"> {{answer}}
+  </div>
+   </div>
+
 </template>
 
 <script>
 export default {
+
   data() {
     return {
-      questions: []
+      questions: [],
+      currentQuestion: null,
+       
     }
   },
 
-  computed: {
-    question() {
-      return this.$route.params.question
-      console.log(question())
-    }
-  },  
   created() {
-    console.log(this.$route.params.question)
-    
-    fetch('/database/quiz1.json')       
-    .then(response => response.json())
-    .then(data => {
-      this.questions = data;
-      console.log(this.questions)
-    })
+    this.fetchData()
   },
+
+  watch: {
+    $route(to, from) {
+      this.showQuestion(to.params.question) 
+    },
+
+
+  },
+
+  methods: {
+    
+    fetchData () { 
+      this.error = null 
+      fetch('/database/quiz1.json')       
+      .then(response => response.json())
+      .then(data => {
+        this.questions = data.questions;
+        this.showQuestion(this.$route.params.question)
+      
+      })
+    },
+    showQuestion(id) {
+      this.currentQuestion = this.questions[id]
+    },
+
+  }
+
+   
+
+ 
   
   
 }
