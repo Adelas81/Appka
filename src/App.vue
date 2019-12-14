@@ -2,7 +2,10 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link :to="{name:'quiz1', params: {question:1}}"> Quiz1</router-link>
+      <router-link :to="{name:'quiz2', params: {question:2}}"> Quiz2</router-link>
+      <router-link :to="{name:'quiz3', params: {question:3}}"> Quiz3</router-link>
+      
     </div>
     <router-view/>
   </div>
