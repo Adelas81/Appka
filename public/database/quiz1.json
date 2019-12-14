@@ -79,7 +79,7 @@
       "lego.jpeg",
       "medved.jpeg"
     ],
-    "correct": 0
+    "correct": 2
     },
     {
     "question": "Co rádi papají zajíčkové?",
@@ -124,7 +124,7 @@
       "panenka.jpeg",
       "plysak.jpeg"
     ],
-    "correct": 2
+    "correct": 0
    },
    {
     "question": "Co maminka chystá na Velikonoce?",
@@ -156,8 +156,8 @@
    {
     "question": "Které zvířátko umí plavat?",
     "answers": [
-      "kravicka.jpeg",
-      "ptacek.jpeg",
+      "kravicka.png",
+      "ptacek.png",
       "ryba.jpeg"
     ],
     "correct": 2
@@ -165,7 +165,7 @@
    {
     "question": "Jak vypadá stůl?",
     "answers": [
-      "postel.jpeg",
+      "postel.png",
       "zarovka.jpeg",
       "stul.jpeg"
     ],
@@ -175,7 +175,7 @@
     "question": "Co musíme nosit v zimě?",
     "answers": [
       "cepice a rukavice.jpeg",
-      "ksiltovka.jpeg",
+      "ksiltovka.png",
       "pantofle.jpeg"
     ],
     "correct": 0
