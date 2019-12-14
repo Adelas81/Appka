@@ -1,10 +1,22 @@
 <template>
   <div v-if="currentQuestion">
-    <h1> {{currentQuestion.question}} </h1>
+    <header>
 
-    <div v-for="(answer,index) in currentQuestion.answers" v-bind:key="index"> {{answer}}
+      <h1> {{currentQuestion.question}} </h1>
+
+    </header>
+
+    <div  class="kontejner">
+
+      <div v-for="(answer,index) in currentQuestion.answers" v-bind:key="index" class="foto">
+          <img v-bind:src="`/quiz1/images/${answer}`" alt="kacka"
+          v-on:click="selectAnswer(index)" >     
+      </div>
+
+    </div>    
+
   </div>
-   </div>
+
 
 </template>
 
@@ -15,6 +27,7 @@ export default {
     return {
       questions: [],
       currentQuestion: null,
+      correctAnswer: null
        
     }
   },
@@ -46,11 +59,23 @@ export default {
     showQuestion(id) {
       this.currentQuestion = this.questions[id]
     },
+    selectAnswer(index) {
+      if (this.currentQuestion.correct === index)  {
+        this.currentQuestion.answers = [this.currentQuestion.answers[index]]
+        
+        setTimeout(function(){ 
+        this.$router.push({name:'quiz1', params: {question: this.$route.params.question + 1}})  
+        }, 1000);
+      } else {
+        console.log('spatne')
+      }
+
+    }
 
   }
 
    
-
+ 
  
   
   
