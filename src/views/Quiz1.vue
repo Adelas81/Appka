@@ -1,5 +1,5 @@
 <template>
-  <div v-if="currentQuestion">
+  <div  v-if="currentQuestion">
     <header>
 
       <h1> {{currentQuestion.question}} </h1>
@@ -12,6 +12,7 @@
           <img v-bind:src="`/quiz1/images/${answer}`" alt="kacka"
           v-on:click="selectAnswer(index)" >     
       </div>
+
 
     </div>    
 
@@ -41,7 +42,6 @@ export default {
       this.showQuestion(to.params.question) 
     },
 
-
   },
 
   methods: {
@@ -61,23 +61,70 @@ export default {
     },
     selectAnswer(index) {
       if (this.currentQuestion.correct === index)  {
-        this.currentQuestion.answers = [this.currentQuestion.answers[index]]
+       // this.currentQuestion.answers = [this.currentQuestion.answers[index]]
+        let audio = new Audio('/sounds/pozitivni.mp3');
+        audio.play();
+        console.log(typeof this.$route.params.question)
         
-        setTimeout(function(){ 
-        this.$router.push({name:'quiz1', params: {question: this.$route.params.question + 1}})  
-        }, 1000);
+        setTimeout(() => { 
+        this.$router.push({name:'quiz1', params: {question: parseInt(this.$route.params.question, 10) + 1}})  
+        }, 3000);
       } else {
-        console.log('spatne')
+        let audio = new Audio('/sounds/negativni.wav');
+        audio.play();
       }
 
     }
 
   }
-
-   
- 
- 
-  
-  
 }
 </script>
+
+<style > 
+
+/* MOBIL */
+
+h1 {    
+font-family: 'Amatic SC', cursive; 
+text-align: center;
+font-size: 40px;
+color: rgb(211, 103, 139);
+font-weight: bold;
+background-color: white;
+
+border-style: solid;
+border-width: 4px;
+border-color: rgb(245, 239, 241);
+border-radius: 10px;
+
+padding: 5px;
+margin: 30px 30px 20px 30px;
+}
+
+body { 
+    background: url('/quiz1/pozadi/pozadi-ovecky-ruzove.jpg') center, no-repeat;
+}
+
+img {
+    border: 4px solid rgb(211, 103, 139);
+    border-radius: 10%;
+    margin: 5px 10px 5px 10px;
+    width: 50%;
+}
+
+/* .kviz {
+    flex: 1 1 auto;
+} */
+
+.kontejner {
+    text-align: center;
+    /* display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    object-fit: cover; */
+    
+}
+
+
+
+
+</style>
