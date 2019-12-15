@@ -1,14 +1,22 @@
 <template>
-    <div>
-        <img src="/final/images/home.jpeg" alt="tlacitko Home">
-        <img src="/final/images/again.png" alt="tlacitko Hrat znovu">
+    <div class="pozadi">
+        <h1> dobrá práce :) </h1>
+        <img v-on:click="buttonKlikHome()" class="home" src="/final/home.jpeg" alt="tlacitko Home">
+        <img v-on:click="buttonKlikAgain()" class="again" src="/final/again.png" alt="tlacitko Hrat znovu">
     </div>
 
 </template>
 
 <script>
 export default {
-    
+    methods: {
+        buttonKlikHome() {
+        this.$router.push({path: '/'})
+        },
+        buttonKlikAgain() {
+        this.$router.push({path: '/quiz/1/1'})
+        }
+    }
 
 }
 </script>
@@ -16,8 +24,8 @@ export default {
 <style scoped>
 
 /* MOBIL */
-.hlavicka {
-    background-image: url("/final/images/duha.jpg");
+.pozadi {
+    background-image: url("/final/duha.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,42 +33,54 @@ export default {
     position: relative;
     width: 100vw;
     height: 100vh;
+
 }
 
 header {
     color: transparent;
 }
 
+h1 {    
+    font-family: 'Amatic SC', cursive; 
+    text-align: center;
+    font-size: 40px;
+    color: rgb(211, 103, 139);
+    font-weight: bold;
+    background-color: white;
 
-.balonky {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(245, 239, 241);
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    bottom: 150px;
+    left: 90px;
 }
 
 * {
     margin: 0;
     padding: 0;
-    }
+}
 
 
 .home {
     position: absolute;
-    top: 20px;
-    left: 340px;
-    width: 10%;
+    top: 25px;
+    left: 260px;
+    width: 15%;
     border-radius: 50%;
     box-shadow: 3px 3px 3px 3px rgb(135, 152, 185);
 }
 
 .again {
     position: absolute;
-    top: 200px;
+    top: 220px;
     left: 120px;
     width: 40%;
     border-radius: 50%;
     box-shadow: 5px 5px 5px 5px rgb(185, 135, 150);
 }
-
+    
     
 </style>
