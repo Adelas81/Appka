@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 import Quiz1  from '../views/Quiz1.vue'
 import Quiz2  from '../views/Quiz2.vue'
 import Quiz3  from '../views/Quiz3.vue'
+import Final  from '../views/Final.vue'
+
 
 
 Vue.use(VueRouter)
@@ -28,6 +30,11 @@ const routes = [
     path: '/quiz/3/:question',
     name: 'quiz3',
     component: Quiz3
+  },
+  {
+    path: '/final',
+    name: 'final',
+    component: Final 
   }
 
 ]
