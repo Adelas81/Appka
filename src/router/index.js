@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Quiz1  from '../views/Quiz1.vue'
 import Quiz2  from '../views/Quiz2.vue'
+import Quiz3  from '../views/Quiz3.vue'
 import Final  from '../views/Final.vue'
 
 
