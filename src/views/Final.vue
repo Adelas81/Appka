@@ -8,13 +8,21 @@
 </template>
 
 <script>
+var audio = new Audio("/sounds/christmas-intro.mp3");
 export default {
+    created() {
+        audio.play()
+    },
     methods: {
         buttonKlikHome() {
-        this.$router.push({path: '/'})
+            audio.pause()
+            audio.currentTime = 0
+            this.$router.push({path: '/'})
         },
         buttonKlikAgain() {
-        this.$router.push({path: '/quiz/1/1'})
+            audio.pause()
+            audio.currentTime = 0
+            this.$router.push({path: '/quiz/1/0'})
         }
     }
 
