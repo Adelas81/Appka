@@ -8,7 +8,7 @@
       "vysavac.jpeg"
     ],
     "correct": 1,
-     "audio": "Co pouzijeme pri sekani travy.m4a"
+     "audio": "Co_pouzijeme_pri_sekani_travy.m4a"
     },
     {
     "question": "Která hračka je plyšová?",
@@ -18,7 +18,7 @@
       "medved.jpeg"
     ],
     "correct": 2,
-    "audio": "Ktera hracka je plysova.m4a"
+    "audio": "Ktera_hracka_je_plysova.m4a"
     },
    {
     "question": "Které zvíře dává mléko?",
@@ -28,7 +28,7 @@
       "slepice.jpeg"
     ],
     "correct": 1,
-    "audio": "Ktere zvire dava mleko.m4a"
+    "audio": "Ktere_zvire_dava_mleko.m4a"
    },
    {
     "question": "Jakou hračku si můžeme vzít do vany?",
@@ -38,7 +38,7 @@
       "plysak.jpeg"
     ],
     "correct": 0,
-    "audio": "Jakou hracku si muzeme vzit do vany.m4a"
+    "audio": "Jakou_hracku_si_muzeme_vzit_do_vany.m4a"
    },
    {
     "question": "Co potřebuje paní doktorka?",
@@ -48,7 +48,7 @@
       "injekce.jpeg"
     ],
     "correct": 2,
-    "audio": "Co potrebuje pani doktorka.m4a"
+    "audio": "Co_potrebuje_pani_doktorka.m4a"
    }
   ]
 }
