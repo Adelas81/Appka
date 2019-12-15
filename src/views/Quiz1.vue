@@ -95,8 +95,8 @@ border-width: 4px;
 border-color: rgb(245, 239, 241);
 border-radius: 10px;
 
-padding: 5px;
-margin: 30px 30px 20px 30px;
+padding: 10px;
+margin: 0px 30px 20px 30px;
 }
 
 .pozadi { 
