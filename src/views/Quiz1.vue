@@ -44,20 +44,27 @@ export default {
       this.currentQuestion = this.questions[id];
       let audio = new Audio(`sounds/${this.currentQuestion.audio}`);
       audio.play();
-      console.log(this.currentQuestion);
     },
     selectAnswer(index) {
       if (this.currentQuestion.correct === index) {
-        // this.currentQuestion.answers = [this.currentQuestion.answers[index]]
         let audio = new Audio("/sounds/pozitivni.mp3");
         audio.play();
-        console.log(typeof this.$route.params.question);
 
-        setTimeout(() => {
-          this.$router.push({
+        let nextPage = null
+
+        if (this.$route.params.question < (this.questions.length - 1)) {
+          nextPage = {
             name: "quiz1",
             params: { question: parseInt(this.$route.params.question, 10) + 1 }
-          });
+          }
+        } else {
+          nextPage = {
+            name: "final"
+          }
+        }
+
+        setTimeout(() => {
+          this.$router.push(nextPage);
         }, 3000);
       } else {
         let audio = new Audio("/sounds/negativni.wav");
