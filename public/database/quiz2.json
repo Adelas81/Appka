@@ -1,0 +1,82 @@
+[
+    {
+      "id": 1,
+      "name": "Kocka",
+      "image": "kocka.jpeg",
+      "nameYoung": "Kotatko",
+      "imageYoung": "kotatko.jpeg",
+      "sound": "kocka.mp3"
+    },
+    {
+      "id": 3,
+      "name": "Krava",
+      "image": "krava.jpeg",
+      "nameYoung": "Telatko",
+      "imageYoung": "telatko.jpeg",
+      "sound": "krava.mp3"
+    },
+    {
+      "id": 4,
+      "name": "Kun",
+      "image": "kun.jpeg",
+      "nameYoung": "Hribe",
+      "imageYoung": "hribe.jpeg",
+      "sound": "kun.mp3"
+    },
+    {
+      "id": 5,
+      "name": "Ovce",
+      "image": "ovce.jpeg",
+      "nameYoung": "Jehnata",
+      "imageYoung": "jehnata.jpeg",
+      "sound": "ovce.mp3"
+    },
+    {
+      "id": 6,
+      "name": "Pes",
+      "image": "pes.jpeg",
+      "nameYoung": "Stene",
+      "imageYoung": "stene.jpeg",
+      "sound": "pes.mp3"
+    },
+    {
+      "id": 7,
+      "name": "Prase",
+      "image": "prase.jpeg",
+      "nameYoung": "Selatko",
+      "imageYoung": "selatko.jpeg",
+      "sound": "prase.wav"
+    },
+    {
+      "id": 8,
+      "name": "Ptacek",
+      "image": "ptacek.jpeg",
+      "nameYoung": "Mimiptacek",
+      "imageYoung": "mimiptacek.jpeg",
+      "sound": "ptacek.mp3"
+    },
+    {
+      "id": 9,
+      "name": "Slepice",
+      "image": "slepice.jpeg",
+      "nameYoung": "Kuratka",
+      "imageYoung": "kuratka.jpeg",
+      "sound": "slepice.wav"
+    },
+    {
+      "id": 10,
+      "name": "Tygr",
+      "image": "tygr.jpeg",
+      "nameYoung": "Tygrik",
+      "imageYoung": "tygrik.jpg",
+      "sound": "tygr.m4a"
+    },
+    {
+      "id": 11,
+      "name": "Hroch",
+      "image": "hroch.jpeg",
+      "nameYoung": "Hrosik",
+      "imageYoung": "hrosik.jpeg",
+      "sound": "hippo3.mp3"
+    }
+  ]
