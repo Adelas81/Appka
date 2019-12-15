@@ -1,23 +1,5 @@
-{ 
+{
   "questions": [
-    {
-    "question": "Ve kterém autě jezdí hasiči?",
-    "answers": [
-      "ambulance.jpg",
-      "hasici.jpeg",
-      "popelari.jpeg"
-    ],
-    "correct": 2
-    },
-    {
-    "question": "Co použijeme, když prší?",
-    "answers": [
-      "bryle.jpeg",
-      "destnik.jpeg",
-      "ploutve.jpeg"
-    ],
-    "correct": 1
-    },
     {
     "question": "Co používáme při sekání trávy?",
     "answers": [
@@ -25,52 +7,8 @@
       "sekacka.jpg",
       "vysavac.jpeg"
     ],
-    "correct": 1
-    },
-    {
-    "question": "která zelenina má červenou barvu?",
-    "answers": [
-      "cesnek.jpeg",
-      "mrkev.jpeg",
-      "rajce.jpeg"
-    ],
-    "correct": 2
-    },
-    {
-    "question": "Ukaž motorku..",
-    "answers": [
-      "ctyrkolka.jpeg",
-      "detska motorka.jpeg",
-      "motorka.jpeg"
-    ],
-    "correct": 2
-    },
-    {
-    "question": "Které auto pracuje na stavbě?",
-    "answers": [
-      "auto.jpeg",
-      "autobus.jpeg",
-      "bagr.jpeg"
-    ],
-    "correct": 2
-    },
-    {
-    "question": "Které zvíře je největší?",
-    "answers": [
-      "krecek.jpeg",
-      "papousek.jpeg",
-      "pejsek.jpeg"
-    ],
-    "correct": 2
-    },
-    {
-    "question": "Které zvířátko dělá med?",
-    "answers": [
-      "beruska.jpeg",
-      "motyl.jpeg",
-      "vcela.jpeg"
-    ],
-    "correct": 2
+    "correct": 1,
+     "audio": "Co pouzijeme pri sekani travy.m4a"
     },
     {
     "question": "Která hračka je plyšová?",
@@ -79,35 +17,9 @@
       "lego.jpeg",
       "medved.jpeg"
     ],
-    "correct": 2
+    "correct": 2,
+    "audio": "Ktera hracka je plysova.m4a"
     },
-    {
-    "question": "Co rádi papají zajíčkové?",
-    "answers": [
-      "bonbonky.jpeg",
-      "mrkev1.jpeg",
-      "syr a cibule.jpeg"
-    ],
-    "correct": 1
-   },
-   {
-    "question": "Které pečivo je rohlík?",
-    "answers": [
-      "bulka.jpeg",
-      "chleb.jpeg",
-      "rohlik.jpeg"
-    ],
-    "correct": 2
-   },
-   {
-    "question": "Co potřebuje maminka na vaření?",
-    "answers": [
-      "hrnec.jpeg",
-      "koste.jpeg",
-      "vrtacka.png"
-    ],
-    "correct": 0
-   },
    {
     "question": "Které zvíře dává mléko?",
     "answers": [
@@ -115,7 +27,8 @@
       "krava.jpeg",
       "slepice.jpeg"
     ],
-    "correct": 1
+    "correct": 1,
+    "audio": "Ktere zvire dela mleko.m4a"
    },
    {
     "question": "Jakou hračku si můžeme vzít do vany?",
@@ -124,25 +37,8 @@
       "panenka.jpeg",
       "plysak.jpeg"
     ],
-    "correct": 0
-   },
-   {
-    "question": "Co maminka chystá na Velikonoce?",
-    "answers": [
-      "dort.jpeg",
-      "kraslice.jpeg",
-      "vanocni koule.jpeg"
-    ],
-    "correct": 1
-   },
-   {
-    "question": "Jaké brýle použijeme do vody?",
-    "answers": [
-      "dioptricke bryle.jpeg",
-      "potapecske bryle.jpeg",
-      "slunecni bryle.jpeg"
-    ],
-    "correct": 1
+    "correct": 0,
+    "audio": "Jakou hracku si muzeme vzit do vany.m4a"
    },
    {
     "question": "Co potřebuje paní doktorka?",
@@ -151,35 +47,8 @@
       "fletna.jpeg",
       "injekce.jpeg"
     ],
-    "correct": 2
-   },
-   {
-    "question": "Které zvířátko umí plavat?",
-    "answers": [
-      "kravicka.png",
-      "ptacek.png",
-      "ryba.jpeg"
-    ],
-    "correct": 2
-   },
-   {
-    "question": "Jak vypadá stůl?",
-    "answers": [
-      "postel.png",
-      "zarovka.jpeg",
-      "stul.jpeg"
-    ],
-    "correct": 2
-   },
-   {
-    "question": "Co musíme nosit v zimě?",
-    "answers": [
-      "cepice a rukavice.jpeg",
-      "ksiltovka.png",
-      "pantofle.jpeg"
-    ],
-    "correct": 0
+    "correct": 2,
+    "audio": "Co potrebuje pani doktorka.m4a"
    }
-    
-  ] 
-}   
+  ]
+}
