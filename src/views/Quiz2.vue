@@ -62,7 +62,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 h1 {
   font-family: "Amatic SC", cursive;
   text-align: center;
