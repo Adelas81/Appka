@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <carousel :per-page="1">
+    <carousel :per-page="1" :paginationEnabled="false">
       <slide v-for="(animal) of animals" v-bind:key="animal.id">
         <img
           v-bind:src=" 'quiz2/images/' + animal.imageYoung"
