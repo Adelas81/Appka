@@ -4,7 +4,13 @@
 
     <div class="kontejner">
       <div v-for="(answer,index) in currentQuestion.answers" v-bind:key="index" class="foto">
-        <img v-bind:src="`/quiz1/images/${answer}`" alt="kacka" v-on:click="selectAnswer(index)" />
+        <transition name="fade" appear>
+          <img 
+            v-if="transition[index]"
+            v-bind:src="`/quiz1/images/${answer}`" 
+            v-on:click="selectAnswer(index)" 
+          />
+        </transition>
       </div>
     </div>
   </div>
@@ -16,7 +22,13 @@ export default {
     return {
       questions: [],
       currentQuestion: null,
-      correctAnswer: null
+      correctAnswer: null,
+      selectAnswerIsDisabled: false,
+      transition: {
+        0: true,
+        1: true,
+        2: true
+      }
     };
   },
 
@@ -46,16 +58,22 @@ export default {
       audio.play();
     },
     selectAnswer(index) {
+      if (this.selectAnswerIsDisabled) return;
+
       if (this.currentQuestion.correct === index) {
+        this.hideWrongAnswers(index);
+
         let audio = new Audio("/sounds/pozitivni.mp3");
         audio.play();
 
         let nextPage = null
 
         if (this.$route.params.question < (this.questions.length - 1)) {
+          let nextQuestion = parseInt(this.$route.params.question, 10) + 1;
+
           nextPage = {
             name: "quiz1",
-            params: { question: parseInt(this.$route.params.question, 10) + 1 }
+            params: { question: nextQuestion }
           }
         } else {
           nextPage = {
@@ -64,11 +82,28 @@ export default {
         }
 
         setTimeout(() => {
+          this.selectAnswerIsDisabled = false;
+          this.resetTransition();
           this.$router.push(nextPage);
         }, 3000);
       } else {
         let audio = new Audio("/sounds/negativni.wav");
         audio.play();
+      }
+    },
+    hideWrongAnswers(correctAnswerIndex) {
+      let vm = this;
+      this.currentQuestion.answers.forEach(function(value, index) {
+        if (index !== correctAnswerIndex) {
+          vm.transition[index] = false;
+        }
+      })
+    },
+    resetTransition() {
+      this.transition = {
+        0: true,
+        1: true,
+        2: true
       }
     }
   }
@@ -77,6 +112,14 @@ export default {
 
 <style scoped >
 /* MOBIL */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 
 h1 {
   font-family: "Amatic SC", cursive;
